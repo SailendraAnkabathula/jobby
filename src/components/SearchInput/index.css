@@ -1,0 +1,32 @@
+.search-input-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 350px;
+  background-color: transparent;
+  border: 2px solid #64748b;
+  border-radius: 5px;
+}
+.user-search-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  flex: 1;
+  padding: 8px;
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: normal;
+}
+.search-icon {
+  color: #f8fafc;
+  size: 18px;
+}
+.search-button {
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: 2px solid #64748b;
+  background-color: #272727;
+}
