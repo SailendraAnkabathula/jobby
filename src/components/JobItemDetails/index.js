@@ -114,6 +114,7 @@ class JobItemDetails extends Component {
     const {
       companyLogoUrl,
       employmentType,
+      companyWebsiteUrl,
       jobDescription,
       location,
       packagePerAnnum,
@@ -157,7 +158,7 @@ class JobItemDetails extends Component {
           <div className="visit-link-with-sub-title">
             <h2 className="sub-title">Description</h2>
             <div className="link-container">
-              <p className="visit-text">Visit</p>
+              <a className="visit-text" href={companyWebsiteUrl}>Visit</a>
               <FiExternalLink size="20" color="#6366f1" />
             </div>
           </div>
