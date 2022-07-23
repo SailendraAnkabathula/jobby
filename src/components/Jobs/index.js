@@ -71,8 +71,7 @@ class Jobs extends Component {
     const {searchInput, employmentTypes, activeSalaryRangeId} = this.state
     const employmentType = employmentTypes.join(',')
     const url = `https://apis.ccbp.in/jobs?employment_type=${employmentType}&minimum_package=${activeSalaryRangeId}&search=${searchInput}`
-    console.log(url)
-    const jwtToken = Cookies.get('jwtToken')
+    const jwtToken = Cookies.get('jwt_token')
     const options = {
       method: 'GET',
       headers: {
@@ -182,7 +181,7 @@ class Jobs extends Component {
             />
             <h1 className="failure-view-title">No Jobs Found</h1>
             <p className="failure-view-description">
-              We could not found any jobs. Try other filters.
+              We could not find any jobs. Try other filters.
             </p>
           </div>
         )}

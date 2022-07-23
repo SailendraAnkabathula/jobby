@@ -25,10 +25,11 @@ class JobItemDetails extends Component {
   }
 
   getJobItemDetails = async () => {
+    this.setState({apiStatus: apiStatusConstraints.inProgress})
     const {match} = this.props
     const {params} = match
     const {id} = params
-    const jwtToken = Cookies.get('jwtToken')
+    const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/jobs/${id}`
     const options = {
       method: 'GET',
@@ -83,7 +84,7 @@ class JobItemDetails extends Component {
   }
 
   renderInProgressView = () => (
-    <div className="loader-container" testid="loader">
+    <div className="loader-container-job" testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -114,6 +115,7 @@ class JobItemDetails extends Component {
     const {
       companyLogoUrl,
       employmentType,
+      companyWebsiteUrl,
       jobDescription,
       location,
       packagePerAnnum,
@@ -157,7 +159,9 @@ class JobItemDetails extends Component {
           <div className="visit-link-with-sub-title">
             <h2 className="sub-title">Description</h2>
             <div className="link-container">
-              <p className="visit-text">Visit</p>
+              <a className="visit-text" href={companyWebsiteUrl}>
+                Visit
+              </a>
               <FiExternalLink size="20" color="#6366f1" />
             </div>
           </div>
@@ -188,7 +192,7 @@ class JobItemDetails extends Component {
             />
           </div>
         </div>
-        <h1 className="similar-jobs-text">SimilarJobs</h1>
+        <h1 className="similar-jobs-text">Similar Jobs</h1>
         <ul className="similar-jobs">
           {similarJobs.map(eachJob => (
             <SimilarJobs key={eachJob.id} jobDetails={eachJob} />

@@ -9,7 +9,7 @@ const Home = () => (
     <div className="home-details-section">
       <h1 className="home-section-heading">Find The Job That Fits Your Life</h1>
       <p className="home-section-description">
-        Millions of people are search for jobs, salary information, company
+        Millions of people are searching for jobs, salary information, company
         reviews. Find the job that fits your abilities and potential.
       </p>
       <Link to="/jobs" className="link-button">
