@@ -159,9 +159,13 @@ class JobItemDetails extends Component {
           <div className="visit-link-with-sub-title">
             <h2 className="sub-title">Description</h2>
             <div className="link-container">
+<<<<<<< HEAD
               <a className="visit-text" href={companyWebsiteUrl}>
                 Visit
               </a>
+=======
+              <a className="visit-text" href={companyWebsiteUrl}>Visit</a>
+>>>>>>> 7105eabc54475dbdb95d49019f16d098aaca29c0
               <FiExternalLink size="20" color="#6366f1" />
             </div>
           </div>
